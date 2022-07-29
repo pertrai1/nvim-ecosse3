@@ -1,6 +1,9 @@
 local keymap = vim.keymap.set
 local silent = { silent = true }
 
+-- Quick exit insert mode
+keymap("i", "jk", "<esc>", silent)
+
 -- Better window movement
 keymap("n", "<C-h>", "<C-w>h", silent)
 keymap("n", "<C-j>", "<C-w>j", silent)
