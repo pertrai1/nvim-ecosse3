@@ -10,7 +10,7 @@ BOLD=$(tput bold)
 
 # VARIABLES
 declare -r GIT_BRANCH="${GIT_BRANCH:-"master"}"
-declare -r GIT_REMOTE="${GIT_REMOTE:-ecosse3/nvim.git}"
+declare -r GIT_REMOTE="${GIT_REMOTE:-pertrai1/nvim-ecosse3.git}"
 declare -r NVIM_DIR="${NVIM_DIR:-"$(which nvim)"}"
 declare -r INSTALL_PREFIX="${INSTALL_PREFIX:-"$HOME/.local"}"
 declare -r XDG_DATA_HOME="${XDG_DATA_HOME:-"$HOME/.local/share"}"
@@ -210,7 +210,6 @@ function install_packer() {
 
 function finish () {
   touch /tmp/first-ecovim-run
-  msg "${BOLD}${GREEN}Thank you for installing my ${BLUE}Ecovim${NC}${BOLD}${GREEN} config! Please support me by giving a star :)${NC}" 1
   echo -e "${BOLD}${GREEN}Do not forget to use a font with glyphs (icons) support [https://github.com/ryanoasis/nerd-fonts].\nI recommend Fira Code for Ecovim setup.${NC}"
 }
 

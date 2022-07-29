@@ -1,10 +1,5 @@
 # Ecovim: Frontend Neovim Config
 
-[![Last commit](https://img.shields.io/github/last-commit/ecosse3/nvim?style=for-the-badge)](https://github.com/ecosse3/nvim/commits/master)
-![Stars](https://img.shields.io/github/stars/ecosse3/nvim?style=for-the-badge)
-![License](https://img.shields.io/github/license/ecosse3/nvim?style=for-the-badge)
-![Neovim Version](https://img.shields.io/badge/For%20Neovim-0.7+-yellowgreen?style=for-the-badge&logo=neovim&logoColor=d8abbb&color=d8abbb)
-
 ### A non-minimal Neovim config built to work most efficiently with Frontend Development.
 
 ## Features
@@ -70,7 +65,7 @@ Git Side Blame
 Copy it into your terminal:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ecosse3/nvim/master/.install/run.sh)
+bash <(curl -s https://raw.githubusercontent.com/pertrai1/nvim-ecosse3/master/.install/run.sh)
 ```
 
 After install configuration:
