@@ -49,6 +49,15 @@ return require('packer').startup({
     use { 'williamboman/mason-lspconfig.nvim' }
     use { 'neovim/nvim-lspconfig' }
 
+    --  Go
+    use {
+      'crispgm/nvim-go',
+      config = function()
+        require('go').config.update_tool('quicktype', function(tool)
+          tool.pkg_mgr = 'yarn'
+        end)
+      end
+    }
     -- LSP Cmp
     use { 'hrsh7th/nvim-cmp', event = 'InsertEnter', config = "require('plugins.cmp')" }
     use { 'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp' }
