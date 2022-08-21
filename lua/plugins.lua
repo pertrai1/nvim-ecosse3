@@ -48,7 +48,7 @@ return require('packer').startup({
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim' }
     use { 'neovim/nvim-lspconfig' }
-
+    use { 'ray-x/lsp_signature.nvim' }
     --  Go
     use {
       'crispgm/nvim-go',
