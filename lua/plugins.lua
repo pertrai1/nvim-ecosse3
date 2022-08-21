@@ -49,6 +49,7 @@ return require('packer').startup({
     use { 'williamboman/mason-lspconfig.nvim' }
     use { 'neovim/nvim-lspconfig' }
     use { 'ray-x/lsp_signature.nvim' }
+
     --  Go
     use {
       'crispgm/nvim-go',
@@ -58,6 +59,7 @@ return require('packer').startup({
         end)
       end
     }
+
     -- LSP Cmp
     use { 'hrsh7th/nvim-cmp', event = 'InsertEnter', config = "require('plugins.cmp')" }
     use { 'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp' }
@@ -113,6 +115,7 @@ return require('packer').startup({
     use { 'kylechui/nvim-surround', config = function() require("nvim-surround").setup({}) end }
     use { 'sunjon/shade.nvim', config = function() require("shade").setup(); require("shade").toggle(); end }
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async', config = "require('plugins.nvim-ufo')" }
+    use { 'simrat39/symbols-outline.nvim', config = function() require("symbols-outline").setup() end }
 
     -- Snippets & Language & Syntax
     use { 'windwp/nvim-autopairs', after = { 'nvim-treesitter', 'nvim-cmp' }, config = "require('plugins.autopairs')" }
@@ -134,7 +137,7 @@ return require('packer').startup({
 
     -- Testing
     use {
-      'rcarriga/neotest',
+      'nvim-neotest/neotest',
       requires = {
         'nvim-lua/plenary.nvim',
         'nvim-treesitter/nvim-treesitter',
