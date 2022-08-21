@@ -43,6 +43,14 @@ local handlers = {
 local function on_attach(client, bufnr)
   -- set up buffer keymaps, etc.
   require("lsp-format").on_attach(client)
+
+  require("lsp_signature").on_attach {
+    hint_enable = false,
+    hi_parameter = "QuickFixLine",
+    handler_opts = {
+      border = vim.g.floating_window_border,
+    },
+  }
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -86,6 +94,7 @@ lspconfig.eslint.setup {
   handlers = handlers,
   on_attach = require('lsp.servers.eslint').on_attach,
   settings = require('lsp.servers.eslint').settings,
+  filetypes = require('lsp.servers.eslint').filetypes
 }
 
 lspconfig.jsonls.setup {
@@ -109,7 +118,14 @@ lspconfig.vuels.setup {
   on_attach = on_attach,
 }
 
-lspconfig.gopls.setup({})
+lspconfig.gopls.setup({
+  on_attach = on_attach,
+  settings = {
+    gopls = {
+      usePlaceholders = true,
+    }
+  }
+})
 
 
 for _, server in ipairs { "bashls", "cssls", "graphql", "html", "volar", "prismals" } do

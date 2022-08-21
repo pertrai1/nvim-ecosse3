@@ -93,27 +93,14 @@ local normal_mode_mappings = {
   ["9"] = "which_key_ignore",
 
   -- single
+  ["/"] = { '<cmd>lua require("telescope.builtin").live_grep()<CR>', 'find' },
+  ["?"] = { '<cmd>lua require("telescope.builtin").oldfiles()<CR>', 'old files' },
+  ["<space>"] = { '<cmd>lua require("config.telescope").my_buffers()<CR>', 'buffers' },
   ["="] = { '<cmd>vertical resize +5<CR>', 'resize +5' },
   ["-"] = { '<cmd>vertical resize -5<CR>', 'resize +5' },
   ["v"] = { '<C-W>v', 'split right' },
   ["V"] = { '<C-W>s', 'split below' },
   ["q"] = { 'quicklist' },
-
-  ["/"] = {
-    name = "Ecovim",
-    ["/"] = { '<cmd>Alpha<CR>', 'open dashboard' },
-    c = { '<cmd>e $MYVIMRC<CR>', 'open config' },
-    i = { '<cmd>PackerInstall<CR>', 'install plugins' },
-    u = { '<cmd>PackerSync<CR>', 'update plugins' },
-    s = {
-      name = "Session",
-      c = { '<cmd>SessionManager load_session<CR>', 'choose session' },
-      r = { '<cmd>SessionManager delete_session<CR>', 'remove session' },
-      d = { '<cmd>SessionManager load_current_dir_session<CR>', 'load current dir session' },
-      l = { '<cmd>SessionManager load_last_session<CR>', 'load last session' },
-      s = { '<cmd>SessionManager save_session<CR>', 'save session' },
-    },
-  },
 
   a = {
     name = "Actions",
@@ -158,6 +145,22 @@ local normal_mode_mappings = {
     t = { 'terminate' },
   },
 
+  e = {
+    name = "Ecovim",
+    ["/"] = { '<cmd>Alpha<CR>', 'open dashboard' },
+    c = { '<cmd>e $MYVIMRC<CR>', 'open config' },
+    i = { '<cmd>PackerInstall<CR>', 'install plugins' },
+    u = { '<cmd>PackerSync<CR>', 'update plugins' },
+    s = {
+      name = "Session",
+      c = { '<cmd>SessionManager load_session<CR>', 'choose session' },
+      r = { '<cmd>SessionManager delete_session<CR>', 'remove session' },
+      d = { '<cmd>SessionManager load_current_dir_session<CR>', 'load current dir session' },
+      l = { '<cmd>SessionManager load_last_session<CR>', 'load last session' },
+      s = { '<cmd>SessionManager save_session<CR>', 'save session' },
+    },
+  },
+
   g = {
     name = "Git",
     a = { '<cmd>!git add %:p<CR>', 'add current' },
@@ -191,6 +194,12 @@ local normal_mode_mappings = {
       w = "worktrees",
       c = "create worktree",
     }
+  },
+
+  o = {
+    name = "Open",
+    f = { "<cmd>NvimTreeFocus<CR>", "tree - focus" },
+    l = { "<cmd>NvimTreeToggle<CR>", "tree - toggle" }
   },
 
   p = {
