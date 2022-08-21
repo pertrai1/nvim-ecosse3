@@ -95,6 +95,7 @@ local normal_mode_mappings = {
   -- single
   ["/"] = { '<cmd>lua require("telescope.builtin").live_grep()<CR>', 'find' },
   ["?"] = { '<cmd>lua require("telescope.builtin").oldfiles()<CR>', 'old files' },
+  [";"] = { '<cmd>lua require("telescope.builtin").commands()<CR>', 'commands' },
   ["<space>"] = { '<cmd>lua require("config.telescope").my_buffers()<CR>', 'buffers' },
   ["="] = { '<cmd>vertical resize +5<CR>', 'resize +5' },
   ["-"] = { '<cmd>vertical resize -5<CR>', 'resize +5' },
@@ -217,7 +218,7 @@ local normal_mode_mappings = {
     name = "Search",
     c = { '<cmd>Telescope colorscheme<CR>', 'color schemes' },
     d = { '<cmd>lua require("plugins.telescope").edit_neovim()<CR>', 'dotfiles' },
-    h = { '<cmd>Telescope oldfiles hidden=true<CR>', 'file history' },
+    f = { '<cmd>Telescope oldfiles hidden=true<CR>', 'file history' },
     H = { '<cmd>lua require("plugins.telescope").command_history()<CR>', 'command history' },
     s = { '<cmd>Telescope search_history theme=dropdown<CR>', 'search history' },
   },
