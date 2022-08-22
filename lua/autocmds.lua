@@ -10,6 +10,7 @@ vim.api.nvim_create_autocmd("BufNewFile", { pattern = "*/node_modules/*", comman
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, { pattern = { "*.txt", "*.md", "*.tex" },
   command = "setlocal spell" })
 vim.api.nvim_create_autocmd("BufWritePre", { callback = function() vim.lsp.buf.format() end })
+vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.go", command = "lua require('go.format').goimport()" })
 -- Attach specific keybindings in which-key for specific filetypes
 local present, _ = pcall(require, "which-key")
 if not present then return end

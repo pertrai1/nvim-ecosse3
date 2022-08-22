@@ -52,11 +52,9 @@ return require('packer').startup({
 
     --  Go
     use {
-      'crispgm/nvim-go',
+      'ray-x/go.nvim',
       config = function()
-        require('go').config.update_tool('quicktype', function(tool)
-          tool.pkg_mgr = 'yarn'
-        end)
+        require('go').setup()
       end
     }
 
