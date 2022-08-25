@@ -43,11 +43,6 @@ return require('packer').startup({
     use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
     use { 'nvim-pack/nvim-spectre' }
     use { 'kyazdani42/nvim-tree.lua', config = "require('plugins.tree')" }
-    use { 'gbprod/stay-in-place.nvim',
-      config = function()
-        require('stay-in-place').setup({})
-      end
-    }
 
     -- LSP Base
     use { 'williamboman/mason.nvim' }
@@ -66,6 +61,7 @@ return require('packer').startup({
     use { 'David-Kunz/cmp-npm', after = 'cmp-tabnine', requires = 'nvim-lua/plenary.nvim',
       config = "require('plugins.cmp-npm')" }
     use { 'saadparwaiz1/cmp_luasnip', after = 'cmp-npm' }
+    use { 'lukas-reineke/lsp-format.nvim' }
 
     -- LSP Addons
     use { 'stevearc/dressing.nvim', requires = 'MunifTanjim/nui.nvim', config = "require('plugins.dressing')" }
@@ -103,7 +99,6 @@ return require('packer').startup({
     use { 'vuki656/package-info.nvim', event = "BufEnter package.json", config = "require('plugins.package-info')" }
     use { 'iamcco/markdown-preview.nvim', run = "cd app && npm install",
       setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" } }
-    use { 'declancm/cinnamon.nvim', config = "require('plugins.cinnamon')" }
     use { 'airblade/vim-rooter', setup = function() vim.g.rooter_patterns = EcoVim.plugins.rooter.patterns end }
     use { 'Shatur/neovim-session-manager', config = "require('plugins.session-manager')" }
     use { 'kylechui/nvim-surround', config = function() require("nvim-surround").setup({}) end }
