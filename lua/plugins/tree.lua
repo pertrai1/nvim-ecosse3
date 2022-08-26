@@ -98,7 +98,7 @@ require 'nvim-tree'.setup {
       },
     },
     icons = {
-      git_placement = "after",
+      git_placement = "before",
       glyphs = {
         git = git_icons
       }
@@ -157,7 +157,7 @@ require 'nvim-tree'.setup {
     width = TREE_WIDTH,
     hide_root_folder = false,
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
-    side = 'left',
+    side = 'right',
     mappings = {
       -- custom only false will merge the list with the default mappings
       -- if true, it will only use your list to set the mappings
