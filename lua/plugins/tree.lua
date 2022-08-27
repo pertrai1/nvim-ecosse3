@@ -90,7 +90,7 @@ require 'nvim-tree'.setup {
     highlight_opened_files = "name",
     root_folder_modifier = ":~",
     indent_markers = {
-      enable = true,
+      enable = false,
       icons = {
         corner = "└ ",
         edge = "│ ",
