@@ -92,12 +92,7 @@ keymap("v", "X", '"_X', silent)
 -- Don't yank on visual paste
 keymap("v", "p", '"_dP', silent)
 
--- Avoid issues because of remapping <c-a> and <c-x> below
-vim.cmd [[
-  nnoremap <Plug>SpeedDatingFallbackUp <c-a>
-  nnoremap <Plug>SpeedDatingFallbackDown <c-x>
-]]
-
+--
 -- Quickfix
 keymap("n", "<Space>,", ":cp<CR>", silent)
 keymap("n", "<Space>.", ":cn<CR>", silent)

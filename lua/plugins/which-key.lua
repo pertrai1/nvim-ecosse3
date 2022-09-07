@@ -94,6 +94,8 @@ local normal_mode_mappings = {
 
   -- single
   ["/"] = { '<cmd>lua require("telescope.builtin").live_grep()<CR>', 'find' },
+  ["."] = { '<cmd>cn<CR>', 'quickfix next' },
+  [","] = { '<cmd>cp<CR>', 'quickfix prev' },
   ["?"] = { '<cmd>lua require("telescope.builtin").oldfiles()<CR>', 'old files' },
   [";"] = { '<cmd>lua require("telescope.builtin").commands()<CR>', 'commands' },
   ["<space>"] = { '<cmd>lua require("config.telescope").my_buffers()<CR>', 'buffers' },
@@ -106,9 +108,9 @@ local normal_mode_mappings = {
   a = {
     name = "Actions",
     c = { 'comment box' },
-    n = { '<cmd>set nonumber!<CR>',                      'line numbers' },
-    r = { '<cmd>set norelativenumber!<CR>',              'relative number' },
-    t = { '<cmd>ToggleTerm direction=float<CR>',         'terminal float' },
+    n = { '<cmd>set nonumber!<CR>', 'line numbers' },
+    r = { '<cmd>set norelativenumber!<CR>', 'relative number' },
+    t = { '<cmd>ToggleTerm direction=float<CR>', 'terminal float' },
   },
 
   b = {
@@ -169,7 +171,15 @@ local normal_mode_mappings = {
     A = { '<cmd>!git add .<CR>', 'add all' },
     b = { '<cmd>lua require("blame").open()<CR>', 'blame' },
     B = { '<cmd>Telescope git_branches<CR>', 'branches' },
-    d = { '<cmd>lua require("plugins.git.diffview").toggle()<CR>', 'diff file' },
+    d = {
+      name = "Diff",
+      c = { '<cmd>DiffviewToggleFiles<CR>', 'close' },
+      e = { '<cmd>DiffviewFocusFiles<CR>', 'focus files' },
+      f = { '<cmd>lua require("plugins.git.diffview").toggle()<CR>', 'file' },
+      h = { '<cmd>DiffviewFileHistory<CR>', 'file history' },
+      r = { '<cmd>DiffviewRefresh<CR>', 'refresh' },
+      t = { '<cmd>DiffviewToggleFiles<CR>', 'toggle' }
+    },
     g = { '<cmd>LazyGit<CR>', 'lazygit' },
     h = {
       name = "Hunk",
