@@ -95,7 +95,7 @@ return require('packer').startup({
     use { 'junegunn/vim-easy-align' }
     use { 'JoosepAlviste/nvim-ts-context-commentstring', after = 'nvim-treesitter' }
     use { 'nacro90/numb.nvim', config = "require('plugins.numb')" }
-    use { 'B4mbus/todo-comments.nvim', config = "require('plugins.todo-comments')" }
+    use { 'folke/todo-comments.nvim', config = "require('plugins.todo-comments')" }
     use { 'folke/zen-mode.nvim', config = "require('plugins.zen')", disable = not EcoVim.plugins.zen.enabled }
     use { 'folke/twilight.nvim', config = function() require("twilight").setup {} end,
       disable = not EcoVim.plugins.zen.enabled }
@@ -129,7 +129,7 @@ return require('packer').startup({
       config = "require('plugins.git.signs')",
       event = "BufRead"
     }
-    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim', config = "require('plugins.git.diffview')" }
+    -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim', config = "require('plugins.git.diffview')" }
     use { 'akinsho/git-conflict.nvim', config = "require('plugins.git.conflict')" }
 
     use { 'ThePrimeagen/git-worktree.nvim', config = "require('plugins.git.worktree')" }
