@@ -80,6 +80,7 @@ return require('packer').startup({
     use { 'ChristianChiarulli/nvim-gps', branch = 'text_hl', config = "require('plugins.gps')", after = 'nvim-treesitter' }
     use { 'jose-elias-alvarez/typescript.nvim' }
     use { 'axelvc/template-string.nvim', config = function() require('template-string').setup() end }
+    use { 'lvimuser/lsp-inlayhints.nvim', config = function() require('lsp-inlayhints').setup() end }
 
     -- General
     use { 'AndrewRadev/switch.vim' }
@@ -94,14 +95,14 @@ return require('packer').startup({
     use { 'junegunn/vim-easy-align' }
     use { 'JoosepAlviste/nvim-ts-context-commentstring', after = 'nvim-treesitter' }
     use { 'nacro90/numb.nvim', config = "require('plugins.numb')" }
-    use { 'B4mbus/todo-comments.nvim', config = "require('plugins.todo-comments')" }
+    use { 'folke/todo-comments.nvim', config = "require('plugins.todo-comments')" }
     use { 'folke/zen-mode.nvim', config = "require('plugins.zen')", disable = not EcoVim.plugins.zen.enabled }
     use { 'folke/twilight.nvim', config = function() require("twilight").setup {} end,
       disable = not EcoVim.plugins.zen.enabled }
     use { 'ggandor/lightspeed.nvim', config = "require('plugins.lightspeed')" }
     use { 'folke/which-key.nvim', config = "require('plugins.which-key')", event = "BufWinEnter" }
     use { 'ecosse3/galaxyline.nvim', after = 'nvim-gps', config = "require('plugins.galaxyline')", event = "BufWinEnter" }
-    use { 'romgrk/barbar.nvim', branch = 'feat/wipeout-cmds', requires = { 'kyazdani42/nvim-web-devicons' },
+    use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' },
       config = "require('plugins.barbar')" }
     use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
     use { 'rcarriga/nvim-notify' }
@@ -128,8 +129,9 @@ return require('packer').startup({
       config = "require('plugins.git.signs')",
       event = "BufRead"
     }
-    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim', config = "require('plugins.git.diffview')" }
+    -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim', config = "require('plugins.git.diffview')" }
     use { 'akinsho/git-conflict.nvim', config = "require('plugins.git.conflict')" }
+
     use { 'ThePrimeagen/git-worktree.nvim', config = "require('plugins.git.worktree')" }
     use { 'kdheepak/lazygit.nvim' }
 
