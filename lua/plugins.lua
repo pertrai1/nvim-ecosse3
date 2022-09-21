@@ -82,7 +82,7 @@ return require('packer').startup({
     use { 'jose-elias-alvarez/typescript.nvim' }
     use { 'axelvc/template-string.nvim', config = function() require('template-string').setup() end }
     use { 'lvimuser/lsp-inlayhints.nvim', config = function() require('lsp-inlayhints').setup() end }
-
+    use { 'simrat39/symbols-outline.nvim', config = "require('plugins.symbols')" }
     -- General
     use { 'AndrewRadev/switch.vim' }
     use { 'AndrewRadev/splitjoin.vim' }
