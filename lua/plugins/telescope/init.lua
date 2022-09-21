@@ -1,11 +1,14 @@
-local actions    = require('telescope.actions')
-local previewers = require('telescope.previewers')
-local builtin    = require('telescope.builtin')
-local icons      = EcoVim.icons;
+local actions        = require('telescope.actions')
+local previewers     = require('telescope.previewers')
+local builtin        = require('telescope.builtin')
+local custom_pickers = require('plugins.telescope.custom_pickers')
+
+local icons = EcoVim.icons;
 
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('repo')
 require("telescope").load_extension("git_worktree")
+require("telescope").load_extension("ui-select")
 
 local git_icons = {
   added = icons.gitAdd,
@@ -29,6 +32,8 @@ require('telescope').setup {
       '--smart-case'
     },
     layout_config     = {
+      width = 0.99,
+      height = 0.99,
       horizontal = {
         preview_cutoff = 120,
       },
@@ -68,7 +73,21 @@ require('telescope').setup {
       override_generic_sorter = false,
       override_file_sorter = true,
       case_mode = "smart_case",
-    }
+    },
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {}
+    },
+  },
+  pickers = {
+    live_grep = {
+      path_display = { "shorten" },
+      mappings = {
+        i = {
+          ['<c-f>'] = custom_pickers.actions.set_extension,
+          ['<c-l>'] = custom_pickers.actions.set_folders,
+        },
+      },
+    },
   }
 }
 
@@ -78,7 +97,8 @@ local M = {}
 
 local delta_bcommits = previewers.new_termopen_previewer {
   get_command = function(entry)
-    return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value .. '^!', '--', entry.current_file }
+    return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value .. '^!', '--',
+      entry.current_file }
   end
 }
 
@@ -113,7 +133,7 @@ end
 -- Custom pickers
 
 M.edit_neovim = function()
-  builtin.git_files (
+  builtin.git_files(
     require('telescope.themes').get_dropdown({
       color_devicons   = true,
       cwd              = "~/.config/nvim",
@@ -140,11 +160,11 @@ M.project_files = function(opts)
 end
 
 M.command_history = function()
-  builtin.command_history (
+  builtin.command_history(
     require('telescope.themes').get_dropdown({
-      color_devicons   = true,
-      winblend         = 4,
-      layout_config    = {
+      color_devicons = true,
+      winblend       = 4,
+      layout_config  = {
         width = function(_, max_columns, _)
           return math.min(max_columns, 150)
         end,

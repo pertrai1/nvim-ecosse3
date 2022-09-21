@@ -40,6 +40,7 @@ keymap("i", "<C-s>", "<ESC> :w<CR>", silent)
 keymap("n", "<C-p>", "<CMD>lua require('plugins.telescope').project_files()<CR>")
 keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.multi-rg')()<CR>")
 keymap("n", "<leader><space>", "<CMD>lua require('config.telescope').my_buffers()<CR>")
+keymap("n", "<leader>ff", "<CMD>lua require('plugins.telescope.custom_pickers').live_grep()<CR>)")
 
 -- Nvim Tree
 keymap("n", "<leader>ol", "<CMD>NvimTreeToggle<CR>")
