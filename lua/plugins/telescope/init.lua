@@ -176,4 +176,17 @@ M.command_history = function()
     }))
 end
 
+M.leader_f = function()
+  require("telescope.builtin").buffers({
+    entry_maker = require("plugins.telescope.leader_f").gen_from_buffer_like_leaderf(),
+    previewer = false,
+    sort_lastused = true,
+    layout_config = {
+      horizontal = {
+        prompt_position = "bottom",
+      },
+    },
+  })
+end
+
 return M
