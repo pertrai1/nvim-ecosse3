@@ -32,8 +32,6 @@ require('telescope').setup {
       '--smart-case'
     },
     layout_config     = {
-      width = 0.99,
-      height = 0.99,
       horizontal = {
         preview_cutoff = 120,
       },

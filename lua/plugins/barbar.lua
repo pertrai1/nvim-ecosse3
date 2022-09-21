@@ -10,7 +10,7 @@ vim.g.bufferline = {
   tabpages = true,
 
   -- Enable/disable close button
-  closable = false,
+  closable = true,
 
   -- Enables/disable clickable tabs
   --  - left-click: go to buffer
@@ -18,7 +18,7 @@ vim.g.bufferline = {
   clickable = true,
 
   -- Excludes buffers from the tabline
-  exclude_ft = {'qf'},
+  exclude_ft = { 'qf' },
   -- exclude_name = ['package.json'],
 
   -- Enable/disable icons

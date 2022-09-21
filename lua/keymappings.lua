@@ -47,7 +47,7 @@ keymap("n", "<leader>ol", "<CMD>NvimTreeToggle<CR>")
 keymap("n", "<leader>of", "<CMD>NvimTreeFocus<CR>")
 
 -- Symbols
-keymap("n", "<leader>os", "<CMD>SymbolsOutline<CR>")
+keymap("n", "<leader>so", "<CMD>SymbolsOutline<CR>")
 
 -- Remove highlights
 keymap("n", "<CR>", ":noh<CR><CR>", silent)
