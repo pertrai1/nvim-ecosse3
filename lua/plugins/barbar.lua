@@ -1,5 +1,5 @@
 -- Set barbar's options
-vim.g.bufferline = {
+require('bufferline').setup({
   -- Enable/disable animations
   animation = true,
 
@@ -63,4 +63,4 @@ vim.g.bufferline = {
   -- Sets the name of unnamed buffers. By default format is "[Buffer X]"
   -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
-}
+})
