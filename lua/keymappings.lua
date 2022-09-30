@@ -1,6 +1,9 @@
 local keymap = vim.keymap.set
 local silent = { silent = true }
 
+-- Quick Jump to CMD
+keymap("n", ";", ":")
+
 -- Quick exit insert mode
 keymap("i", "jk", "<esc>", silent)
 
@@ -9,9 +12,6 @@ keymap("n", "<C-h>", "<C-w>h", silent)
 keymap("n", "<C-j>", "<C-w>j", silent)
 keymap("n", "<C-k>", "<C-w>k", silent)
 keymap("n", "<C-l>", "<C-w>l", silent)
-
--- Quick escape out of insert mode
-keymap("i", "jk", "<esc>", silent)
 
 -- Jump up and down faster
 keymap("n", "<C-j>", "5j")
