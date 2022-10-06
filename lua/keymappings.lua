@@ -20,6 +20,12 @@ keymap("n", "<C-k>", "5k")
 -- H to move to the first non-blank character of the line
 keymap("n", "H", "^", silent)
 
+-- Copy to clipboard
+keymap("v", "<leader>y", '"+y', silent)
+
+-- Quick search and replace
+keymap("n", "<Leader>fr", ":%s//gc<left><left><left>")
+
 -- Move selected line / block of text in visual mode
 keymap("x", "K", ":move '<-2<CR>gv-gv", silent)
 keymap("x", "J", ":move '>+1<CR>gv-gv", silent)
@@ -38,7 +44,8 @@ keymap("i", "<C-s>", "<ESC> :w<CR>", silent)
 
 -- Telescope
 keymap("n", "<C-p>", "<CMD>lua require('plugins.telescope').project_files()<CR>")
-keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.multi-rg')()<CR>")
+keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.live_grep').live_grep_in_folder()<CR>")
+-- keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.multi-rg')()<CR>")
 keymap("n", "<leader><space>", "<CMD>lua require('config.telescope').my_buffers()<CR>")
 keymap("n", "<leader>ff", "<CMD>lua require('plugins.telescope.custom_pickers').live_grep()<CR>")
 keymap("n", "<S-f>", "<CMD>lua require('plugins.telescope').leader_f()<CR>")
