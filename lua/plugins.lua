@@ -22,7 +22,15 @@ return require('packer').startup({
 
     -- Themes
     use { 'folke/tokyonight.nvim' }
-
+    use {
+      "catppuccin/nvim",
+      as = "catppuccin",
+      config = function()
+        vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+        require("catppuccin").setup()
+        vim.api.nvim_command "colorscheme catppuccin"
+      end
+    }
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', config = "require('plugins.treesitter')" }
     use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
