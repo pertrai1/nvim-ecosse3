@@ -43,7 +43,9 @@ tokyonight.setup({
     local prompt = "#FFA630"
     local text = "#488dff"
     local none = "NONE"
-
+    hl.Comment = {
+      fg = "#767676"
+    }
     hl.TelescopeTitle = {
       fg = prompt,
     }
