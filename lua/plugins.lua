@@ -153,6 +153,28 @@ return require('packer').startup({
     use { 'rcarriga/nvim-dap-ui' }
     use { 'mfussenegger/nvim-dap', config = "require('plugins.dap')" }
 
+    -- Play around with
+    use({
+      "folke/noice.nvim",
+      config = function()
+        require("noice").setup({
+          lsp = {
+            signature = {
+              enabled = false
+            }
+          }
+        })
+      end,
+      requires = {
+        -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+        "MunifTanjim/nui.nvim",
+        -- OPTIONAL:
+        --   `nvim-notify` is only needed, if you want to use the notification view.
+        --   If not available, we use `mini` as the fallback
+        "rcarriga/nvim-notify",
+      }
+    })
+
     if packer_bootstrap then
       require('packer').sync()
     end
