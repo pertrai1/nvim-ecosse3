@@ -26,6 +26,7 @@ local options = {
   splitright     = true, --- Vertical splits will automatically be to the right
   swapfile       = false, --- Swap not needed
   tabstop        = 2, --- Insert 2 spaces for a tab
+  textwidth      = 80,
   termguicolors  = true, --- Correct terminal colors
   timeoutlen     = 500, --- Faster completion (cannot be lower than 200 because then commenting doesn't work)
   undofile       = true, --- Sets undo to file
