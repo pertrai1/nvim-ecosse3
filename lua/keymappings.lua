@@ -134,6 +134,11 @@ keymap("v", "<Leader>pr", "<cmd>lua require('spectre').open_visual()<CR>")
 -- LSP
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", silent)
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references({ includeDeclaration = false })<CR>", silent)
+keymap("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", silent)
+keymap("n", "gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", silent)
+keymap("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", silent)
+keymap("n", "gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", silent)
+
 keymap("n", "<C-Space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
 keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
 keymap("v", "<leader>ca", "<cmd>'<,'>lua vim.lsp.buf.range_code_action()<CR>", silent)

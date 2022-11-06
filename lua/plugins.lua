@@ -50,6 +50,13 @@ return require('packer').startup({
     use { 'neovim/nvim-lspconfig' }
     use { 'ray-x/lsp_signature.nvim' }
 
+    use {
+      'rmagatti/goto-preview',
+      config = function()
+        require('goto-preview').setup {}
+      end
+    }
+
     --  Go
     use {
       'ray-x/go.nvim',
