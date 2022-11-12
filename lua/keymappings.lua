@@ -2,7 +2,7 @@ local keymap = vim.keymap.set
 local silent = { silent = true }
 
 -- Quick Jump to CMD
-keymap("n", ";", ":")
+-- keymap("n", ";", ":")
 
 -- Quick exit insert mode
 keymap("i", "jk", "<esc>", silent)
@@ -13,10 +13,6 @@ keymap("n", "<C-j>", "<C-w>j", silent)
 keymap("n", "<C-k>", "<C-w>k", silent)
 keymap("n", "<C-l>", "<C-w>l", silent)
 
--- Jump up and down faster
-keymap("n", "<C-j>", "5j")
-keymap("n", "<C-k>", "5k")
-
 -- H to move to the first non-blank character of the line
 keymap("n", "H", "^", silent)
 
@@ -24,7 +20,7 @@ keymap("n", "H", "^", silent)
 keymap("v", "<leader>y", '"+y', silent)
 
 -- Quick search and replace
-keymap("n", "<Leader>fr", ":%s//gc<left><left><left>")
+-- keymap("n", "<Leader>fr", ":%s//gc<left><left><left>")
 
 -- Move selected line / block of text in visual mode
 keymap("x", "K", ":move '<-2<CR>gv-gv", silent)
@@ -35,8 +31,8 @@ keymap("v", "<", "<gv", silent)
 keymap("v", ">", ">gv", silent)
 
 -- Case change in visual mode
-keymap("v", "`", "u", silent)
-keymap("v", "<A-`>", "U", silent)
+-- keymap("v", "`", "u", silent)
+-- keymap("v", "<A-`>", "U", silent)
 
 -- Save file by CTRL-S
 keymap("n", "<C-s>", ":w<CR>", silent)
@@ -109,16 +105,11 @@ keymap("n", "<Space>.", ":cn<CR>", silent)
 keymap("n", "<leader>q", "<cmd>lua require('utils').toggle_quicklist()<CR>", silent)
 
 -- Easyalign
-keymap("n", "ga", "<Plug>(EasyAlign)", silent)
-keymap("x", "ga", "<Plug>(EasyAlign)", silent)
+-- keymap("n", "ga", "<Plug>(EasyAlign)", silent)
+-- keymap("x", "ga", "<Plug>(EasyAlign)", silent)
 
 keymap("n", "=", "<cmd>vertical resize +5<CR>", silent)
 keymap("n", "-", "<cmd>vertical resize -5<CR>", silent)
-
--- Manually invoke speeddating in case switch.vim didn't work
-keymap("n", "<C-a>", ":if !switch#Switch() <bar> call speeddating#increment(v:count1) <bar> endif<CR>", silent)
-keymap("n", "<C-x>", ":if !switch#Switch({'reverse': 1}) <bar> call speeddating#increment(-v:count1) <bar> endif<CR>",
-  silent)
 
 -- Open links under cursor in browser with gx
 if vim.fn.has('macunix') == 1 then
