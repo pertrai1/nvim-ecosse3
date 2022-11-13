@@ -41,7 +41,6 @@ return require('packer').startup({
     use { 'cljoly/telescope-repo.nvim' }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
     use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
-    use { 'nvim-pack/nvim-spectre' }
     use { 'kyazdani42/nvim-tree.lua', config = "require('plugins.tree')" }
 
     -- LSP Base
@@ -98,7 +97,6 @@ return require('packer').startup({
     use { 'tpope/vim-repeat' }
     -- use { 'tpope/vim-speeddating' }
     use { 'dhruvasagar/vim-table-mode' }
-    use { 'mg979/vim-visual-multi', config = function() vim.g.VM_leader = ";" end }
     use { 'junegunn/vim-easy-align' }
     use { 'JoosepAlviste/nvim-ts-context-commentstring', after = 'nvim-treesitter' }
     use { 'nacro90/numb.nvim', config = "require('plugins.numb')" }
