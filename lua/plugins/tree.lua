@@ -167,16 +167,16 @@ require 'nvim-tree'.setup {
     },
     number = false,
     relativenumber = false,
-    float = {
-      enable = true,
-      open_win_config = {
-        border = "rounded",
-        width = 100,
-        height = 30,
-        row = 10,
-        col = 58,
-      }
-    }
+    -- float = {
+    --   enable = true,
+    --   open_win_config = {
+    --     border = "rounded",
+    --     width = 100,
+    --     height = 30,
+    --     row = 10,
+    --     col = 58,
+    --   }
+    -- }
   },
   trash                              = {
     cmd = "trash",

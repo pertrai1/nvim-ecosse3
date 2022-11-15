@@ -219,7 +219,7 @@ local normal_mode_mappings = {
   o = {
     name = "Open",
     f = { "<cmd>NvimTreeFocus<CR>", "tree - focus" },
-    l = { "<cmd>NvimTreeToggle<CR>", "tree - toggle" }
+    l = { "<cmd>lua require('nvim-tree.api').tree.toggle(false, true)<CR>", "tree - toggle" }
   },
 
   p = {
