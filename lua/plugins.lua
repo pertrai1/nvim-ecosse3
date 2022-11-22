@@ -72,8 +72,7 @@ return require('packer').startup({
     use { 'hrsh7th/cmp-path', after = 'cmp-buffer' }
     use { 'hrsh7th/cmp-cmdline', after = 'cmp-path' }
     use { 'hrsh7th/cmp-calc', after = 'cmp-cmdline' }
-    use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp', after = 'cmp-calc' }
-    use { 'David-Kunz/cmp-npm', after = 'cmp-tabnine', requires = 'nvim-lua/plenary.nvim',
+    use { 'David-Kunz/cmp-npm', requires = 'nvim-lua/plenary.nvim',
       config = "require('plugins.cmp-npm')" }
     use { 'saadparwaiz1/cmp_luasnip', after = 'cmp-npm' }
     use { 'lukas-reineke/lsp-format.nvim' }
