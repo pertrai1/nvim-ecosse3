@@ -55,6 +55,12 @@ return require('packer').startup({
         require('goto-preview').setup {}
       end
     }
+    use({
+      'dnlhc/glance.nvim',
+      config = function()
+        require('glance').setup({})
+      end,
+    })
 
     --  Go
     use {
