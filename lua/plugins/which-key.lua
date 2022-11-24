@@ -132,13 +132,20 @@ local normal_mode_mappings = {
     D = { '<cmd>Telescope diagnostics wrap_results=true<CR>', 'workspace diagnostics' },
     f = { 'format' },
     l = { 'line diagnostics' },
+    -- p = {
+    --   name = "Preview",
+    --   c = { '<cmd>lua require("goto-preview").close_all_win()<CR>', 'close' },
+    --   d = { '<cmd>lua require("goto-preview").goto_preview_definition()<CR>', 'definition' },
+    --   i = { '<cmd>lua require("goto-preview").goto_preview_implementation()<CR>', 'type definition' },
+    --   r = { '<cmd>lua require("goto-preview").goto_preview_references()<CR>', 'references' },
+    --   t = { '<cmd>lua require("goto-preview").goto_preview_type_definition()<CR>', 'type definition' }
+    -- },
     p = {
       name = "Preview",
-      c = { '<cmd>lua require("goto-preview").close_all_win()<CR>', 'close' },
-      d = { '<cmd>lua require("goto-preview").goto_preview_definition()<CR>', 'definition' },
-      i = { '<cmd>lua require("goto-preview").goto_preview_implementation()<CR>', 'type definition' },
-      r = { '<cmd>lua require("goto-preview").goto_preview_references()<CR>', 'references' },
-      t = { '<cmd>lua require("goto-preview").goto_preview_type_definition()<CR>', 'type definition' }
+      d = { '<cmd>Glance definitions<CR>', 'definitions' },
+      i = { '<cmd>Glance implementation<CR>', 'implementations' },
+      r = { '<cmd>Glance references<CR>', 'references' },
+      t = { '<cmd>Glance type_definitions<CR>', 'type definitions' }
     },
     r = { 'rename' },
     t = { '<cmd>LspToggleAutoFormat<CR>', 'toggle format on save' },
