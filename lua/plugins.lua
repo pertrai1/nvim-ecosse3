@@ -17,7 +17,6 @@ return require('packer').startup({
     use { 'lewis6991/impatient.nvim' }
     use { 'nvim-lua/plenary.nvim' }
     use { 'kyazdani42/nvim-web-devicons' }
-    use { 'goolord/alpha-nvim', config = "require('plugins.alpha')" }
 
     -- Themes
     use { 'folke/tokyonight.nvim' }
@@ -49,12 +48,6 @@ return require('packer').startup({
     use { 'neovim/nvim-lspconfig' }
     use { 'ray-x/lsp_signature.nvim' }
 
-    use {
-      'rmagatti/goto-preview',
-      config = function()
-        require('goto-preview').setup {}
-      end
-    }
     use({
       'dnlhc/glance.nvim',
       config = function()
@@ -165,6 +158,8 @@ return require('packer').startup({
     use { 'mfussenegger/nvim-dap', config = "require('plugins.dap')" }
 
     -- Play around with
+    -- use { 'ldelossa/nvim-ide', config = "require('plugins.nvim-ide')" }
+
     -- use({
     --   "folke/noice.nvim",
     --   config = function()

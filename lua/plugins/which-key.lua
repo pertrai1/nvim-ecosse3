@@ -132,14 +132,6 @@ local normal_mode_mappings = {
     D = { '<cmd>Telescope diagnostics wrap_results=true<CR>', 'workspace diagnostics' },
     f = { 'format' },
     l = { 'line diagnostics' },
-    -- p = {
-    --   name = "Preview",
-    --   c = { '<cmd>lua require("goto-preview").close_all_win()<CR>', 'close' },
-    --   d = { '<cmd>lua require("goto-preview").goto_preview_definition()<CR>', 'definition' },
-    --   i = { '<cmd>lua require("goto-preview").goto_preview_implementation()<CR>', 'type definition' },
-    --   r = { '<cmd>lua require("goto-preview").goto_preview_references()<CR>', 'references' },
-    --   t = { '<cmd>lua require("goto-preview").goto_preview_type_definition()<CR>', 'type definition' }
-    -- },
     p = {
       name = "Preview",
       d = { '<cmd>Glance definitions<CR>', 'definitions' },
@@ -166,7 +158,6 @@ local normal_mode_mappings = {
 
   e = {
     name = "Ecovim",
-    ["/"] = { '<cmd>Alpha<CR>', 'open dashboard' },
     c = { '<cmd>e $MYVIMRC<CR>', 'open config' },
     i = { '<cmd>PackerInstall<CR>', 'install plugins' },
     u = { '<cmd>PackerSync<CR>', 'update plugins' },

@@ -6,7 +6,6 @@ end
 
 local function disable_cursorword()
   local disable_ft = {
-    ['alpha'] = true,
     ['lspsagafinder'] = true,
     ['NeogitStatus'] = true,
     ['text'] = true,
@@ -24,7 +23,6 @@ end
 
 local function matchadd()
   local disable_ft = {
-    ['alpha'] = true,
     ['NvimTree'] = true,
     ['lspsagafinder'] = true,
     ['dashboard'] = true,

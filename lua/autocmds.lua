@@ -47,7 +47,6 @@ if vim.fn.has('nvim-0.8') == 1 then
         "neogitstatus",
         "NvimTree",
         "Trouble",
-        "alpha",
         "lir",
         "Outline",
         "spectre_panel",
