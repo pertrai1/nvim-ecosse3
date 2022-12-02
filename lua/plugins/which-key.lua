@@ -216,8 +216,10 @@ local normal_mode_mappings = {
 
   o = {
     name = "Open",
-    f = { "<cmd>NvimTreeFocus<CR>", "tree - focus" },
-    l = { "<cmd>lua require('nvim-tree.api').tree.toggle(false, true)<CR>", "tree - toggle" }
+    b = { "<cmd>Neotree position=float source=buffers<CR>", "tree - buffers" },
+    f = { "<cmd>Neotree position=float<CR>", "tree - float" },
+    g = { "<cmd>Neotree position=float source=git_status<CR>", "tree - git" },
+    l = { "<cmd>Neotree position=left focus toggle<CR>", "tree - toggle" },
   },
 
   p = {

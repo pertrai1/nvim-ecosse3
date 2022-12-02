@@ -40,7 +40,18 @@ return require('packer').startup({
     use { 'cljoly/telescope-repo.nvim' }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
     use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
-    use { 'kyazdani42/nvim-tree.lua', config = "require('plugins.tree')" }
+    -- use { 'kyazdani42/nvim-tree.lua', config = "require('plugins.tree')" }
+
+    use {
+      'nvim-neo-tree/neo-tree.nvim',
+      branch = 'v2.x',
+      requires = {
+        'nvim-lua/plenary.nvim',
+        'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+        'MunifTanjim/nui.nvim',
+      },
+      config = "require('plugins.neo-tree')"
+    }
 
     -- LSP Base
     use { 'williamboman/mason.nvim' }

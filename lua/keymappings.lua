@@ -45,9 +45,15 @@ keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.live_grep').li
 keymap("n", "<leader><space>", "<CMD>lua require('config.telescope').my_buffers()<CR>")
 keymap("n", "<leader>ff", "<CMD>lua require('plugins.telescope.custom_pickers').live_grep()<CR>")
 keymap("n", "<S-f>", "<CMD>lua require('plugins.telescope').leader_f()<CR>")
+
 -- Nvim Tree
-keymap("n", "<leader>ol", "<CMD>NvimTreeToggle<CR>")
-keymap("n", "<leader>of", "<CMD>NvimTreeFocus<CR>")
+-- keymap("n", "<leader>ol", "<CMD>NvimTreeToggle<CR>")
+-- keymap("n", "<leader>of", "<CMD>NvimTreeFocus<CR>")
+-- Neo Tree
+keymap("n", "<leader>ol", "<CMD>Neotree position=left focus toggle<CR>")
+keymap("n", "<leader>ob", "<CMD>Neotree position=float source=buffers<CR>")
+keymap("n", "<leader>og", "<CMD>Neotree position=float source=git_status<CR>")
+keymap("n", "<leader>of", "<CMD>Neotree position=float<CR>")
 
 -- Symbols
 keymap("n", "<leader>so", "<CMD>SymbolsOutline<CR>")
