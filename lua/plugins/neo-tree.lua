@@ -14,7 +14,7 @@ vim.fn.sign_define("DiagnosticSignHint",
 -- in the form "LspDiagnosticsSignWarning"
 --
 require("neo-tree").setup({
-  close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+  close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
   popup_border_style = "rounded",
   enable_git_status = true,
   enable_diagnostics = true,
@@ -95,10 +95,10 @@ require("neo-tree").setup({
       ["<cr>"] = "open",
       ["<esc>"] = "revert_preview",
       ["P"] = { "toggle_preview", config = { use_float = true } },
-      ["S"] = "open_split",
-      ["s"] = "open_vsplit",
-      -- ["S"] = "split_with_window_picker",
-      -- ["s"] = "vsplit_with_window_picker",
+      -- ["S"] = "open_split",
+      -- ["s"] = "open_vsplit",
+      ["S"] = "split_with_window_picker",
+      ["s"] = "vsplit_with_window_picker",
       ["t"] = "open_tabnew",
       -- ["<cr>"] = "open_drop",
       -- ["t"] = "open_tab_drop",
