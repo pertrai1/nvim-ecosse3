@@ -120,12 +120,12 @@ lspconfig.sumneko_lua.setup {
   settings = require('lsp.servers.sumneko_lua').settings,
 }
 
-lspconfig.vuels.setup {
-  filetypes = require('lsp.servers.vuels').filetypes,
-  handlers = handlers,
-  init_options = require('lsp.servers.vuels').init_options,
-  on_attach = on_attach,
-}
+-- lspconfig.vuels.setup {
+--   filetypes = require('lsp.servers.vuels').filetypes,
+--   handlers = handlers,
+--   init_options = require('lsp.servers.vuels').init_options,
+--   on_attach = on_attach,
+-- }
 
 lspconfig.gopls.setup({
   on_attach = on_attach,
