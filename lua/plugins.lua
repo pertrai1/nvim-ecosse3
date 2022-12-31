@@ -138,8 +138,8 @@ return require('packer').startup({
     use { 'folke/zen-mode.nvim', config = "require('plugins.zen')", disable = not EcoVim.plugins.zen.enabled }
     use { 'folke/twilight.nvim', config = function() require("twilight").setup {} end,
       disable = not EcoVim.plugins.zen.enabled }
-    -- use { 'ggandor/lightspeed.nvim', config = "require('plugins.lightspeed')" }
-    use { 'ggandor/leap.nvim', config = "require('plugins.leap')" }
+
+    use { 'ggandor/leap.nvim' }
     use { 'folke/which-key.nvim', config = "require('plugins.which-key')", event = "BufWinEnter" }
     use { 'ecosse3/galaxyline.nvim', after = 'nvim-gps', config = "require('plugins.galaxyline')", event = "BufWinEnter" }
     use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' },
@@ -157,9 +157,9 @@ return require('packer').startup({
     use { 'simrat39/symbols-outline.nvim', config = function() require("symbols-outline").setup() end }
 
     -- Snippets & Language & Syntax
-    use { 'windwp/nvim-autopairs', after = { 'nvim-treesitter', 'nvim-cmp' }, config = "require('plugins.autopairs')" }
+    use { 'windwp/nvim-autopairs', after = { 'nvim-treesitter', 'nvim-cmp' } }
     use { 'p00f/nvim-ts-rainbow', after = { 'nvim-treesitter' } }
-    use { 'lukas-reineke/indent-blankline.nvim', config = "require('plugins.indent')" }
+    use { 'lukas-reineke/indent-blankline.nvim' }
     use { 'NvChad/nvim-colorizer.lua', config = "require('plugins.colorizer')" }
     use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' }, after = 'cmp_luasnip' }
 
