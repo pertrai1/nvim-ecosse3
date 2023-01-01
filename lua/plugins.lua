@@ -24,10 +24,10 @@ return require('packer').startup({
 
     --
     -- Treesitter
-    use { 'nvim-treesitter/nvim-treesitter', config = "require('plugins.treesitter')" }
+    use { 'nvim-treesitter/nvim-treesitter' }
     use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } }
     use { 'RRethy/nvim-treesitter-textsubjects', after = { 'nvim-treesitter' } }
-    use { 'm-demare/hlargs.nvim', config = "require('plugins.hlargs')" }
+    use { 'm-demare/hlargs.nvim' }
 
     -- Navigating (Telescope/Tree/Refactor)
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
